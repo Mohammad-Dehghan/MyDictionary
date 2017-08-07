@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mydictionary.MainController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="263.0" layoutY="4.0" prefHeight="20" prefWidth="75" text="دیکشنری من" />
+        <Button fx:id="new_word" layoutX="494.0" layoutY="46.0" onAction="#new_word" rotate="45.0" text="افزودن لغت جدید" textAlignment="CENTER" />
+        <TextField fx:id="search_box" alignment="CENTER_RIGHT" layoutX="396.0" layoutY="78.0" />
+        <ComboBox fx:id="search_lang" layoutX="283.0" layoutY="78.0" prefHeight="25.0" prefWidth="113.0" promptText="زبان جست‌وجو" />
+        <Button fx:id="search" layoutX="219.0" layoutY="78.0" mnemonicParsing="false" onAction="#search" text="جست‌وجو" textAlignment="CENTER" />
+      <TableView fx:id="table" layoutX="13.0" layoutY="116.0" prefHeight="274.0" prefWidth="573.0">
+        <columns>
+          <TableColumn fx:id="en" prefWidth="66.0" text="English" />
+          <TableColumn fx:id="deu" prefWidth="109.0" text="Deutch(German)" />
+            <TableColumn fx:id="ar" prefWidth="66.0" text="العربیه" />
+            <TableColumn fx:id="fa" prefWidth="66.0" text="پارسی" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>
