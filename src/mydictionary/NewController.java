@@ -1,5 +1,6 @@
 package mydictionary;
 
+import kernel.db.DB;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,7 +9,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
+//import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -116,7 +117,7 @@ public class NewController implements Initializable {
                                 }
                             }
                         }
-                        Notify.createAlert("با موفقیت اضافه شد", Alert.AlertType.INFORMATION);
+                        //Notify.createAlert("با موفقیت اضافه شد", Alert.AlertType.INFORMATION);
                         break;
                     case "Deutch(Germany)":
                         words = new ArrayList<>();
@@ -167,7 +168,7 @@ public class NewController implements Initializable {
                                 }
                             }
                         }
-                        Notify.createAlert("با موفقیت اضافه شد", Alert.AlertType.INFORMATION);
+                        //Notify.createAlert("با موفقیت اضافه شد", Alert.AlertType.INFORMATION);
                         break;
                     case "العربیة":
                         words = new ArrayList<>();
@@ -218,7 +219,7 @@ public class NewController implements Initializable {
                                 }
                             }
                         }
-                        Notify.createAlert("با موفقیت اضافه شد", Alert.AlertType.INFORMATION);
+                        //Notify.createAlert("با موفقیت اضافه شد", Alert.AlertType.INFORMATION);
                         break;
                 }
             }
@@ -232,9 +233,9 @@ public class NewController implements Initializable {
             fa8.setText("");
             new_field.setText("");
         } catch (SQLException ex) {
-            Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
+            //Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
         } catch (Exception ex) {
-            Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
+            //Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
@@ -242,7 +243,7 @@ public class NewController implements Initializable {
         try {
             MyDictionary.replaceSceneContent("Main.fxml");
         } catch (Exception ex) {
-            Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
+            //Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
         }
     }
 

@@ -1,5 +1,6 @@
 package mydictionary;
 
+import kernel.db.DB;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,7 +9,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
+//import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -51,7 +52,7 @@ public class MainController implements Initializable {
         try {
             MyDictionary.replaceSceneContent("New.fxml");
         } catch (Exception ex) {
-            Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
+            //Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
@@ -88,7 +89,7 @@ public class MainController implements Initializable {
                 }
             }
         } catch (SQLException ex) {
-            Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
+            //Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
@@ -125,7 +126,7 @@ public class MainController implements Initializable {
                 }
             }
         } catch (SQLException ex) {
-            Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
+            //Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
@@ -162,7 +163,7 @@ public class MainController implements Initializable {
                 }
             }
         } catch (SQLException ex) {
-            Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
+            //Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
@@ -171,7 +172,7 @@ public class MainController implements Initializable {
             String word = search_box.getText();
             String lang = search_lang.getValue();
             if (word.isEmpty() || word.equals("") || word.equals(" ")) {
-                Notify.createAlert("کلمه‌ای برای جست‌وجو وارد کنید", Alert.AlertType.WARNING);
+                //Notify.createAlert("کلمه‌ای برای جست‌وجو وارد کنید", Alert.AlertType.WARNING);
             } else {
                 word = word.toLowerCase();
                 fa_str = "";
@@ -245,7 +246,7 @@ public class MainController implements Initializable {
                         update_arab(words);
                         break;
                     default:
-                        Notify.createAlert("نوع زبان برای جست‌وجو انتخاب نشده است", Alert.AlertType.ERROR);
+                        //Notify.createAlert("نوع زبان برای جست‌وجو انتخاب نشده است", Alert.AlertType.ERROR);
                         break;
                 }
 //                fa_result.setText(fa_str);
@@ -254,9 +255,9 @@ public class MainController implements Initializable {
 //                arab_result.setText(arab_str);
             }
         } catch (SQLException ex) {
-            Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
+            //Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
         } catch (Exception ex) {
-            Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
+            //Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
         }
     }
 }

@@ -1,7 +1,6 @@
-package mydictionary;
+package kernel.db;
 
 import java.sql.*;
-import javafx.scene.control.Alert;
 
 /**
  *
@@ -28,7 +27,7 @@ public class DB {
             con = DriverManager.getConnection("jdbc:sqlite:" + database);
             statement = con.createStatement();
         } catch (ClassNotFoundException | SQLException ex) {
-            Notify.createAlert(ex.getClass().getName() + ": " + ex.getMessage(), Alert.AlertType.ERROR);
+            //
         }
     }
 }
