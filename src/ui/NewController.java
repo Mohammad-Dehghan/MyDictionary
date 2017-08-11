@@ -1,4 +1,4 @@
-package ui.ane;
+package ui;
 
 import kernel.db.DB;
 import java.net.URL;

@@ -26,9 +26,9 @@ public class MyDictionary extends Application {
 
     public static Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
-        InputStream in = MyDictionary.class.getResourceAsStream(fxml);
+        InputStream in = MainController.class.getResourceAsStream(fxml);
         loader.setBuilderFactory(new JavaFXBuilderFactory());
-        loader.setLocation(MyDictionary.class.getResource(fxml));
+        loader.setLocation(MainController.class.getResource(fxml));
         AnchorPane page;
         try {
             page = (AnchorPane) loader.load(in);
