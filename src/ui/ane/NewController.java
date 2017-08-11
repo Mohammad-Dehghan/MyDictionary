@@ -1,4 +1,4 @@
-package mydictionary;
+package ui.ane;
 
 import kernel.db.DB;
 import java.net.URL;
@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import mydictionary.MyDictionary;
 
 /**
  * FXML Controller class

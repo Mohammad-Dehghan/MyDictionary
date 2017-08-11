@@ -1,5 +1,7 @@
 package mydictionary;
 
+import assets.Assets;
+import ui.MainController;
 import java.io.InputStream;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -53,7 +55,7 @@ public class MyDictionary extends Application {
         root = new StackPane();
         primaryStage.setTitle("دیکشنری من");
         primaryStage.setResizable(false);
-        primaryStage.getIcons().add(new Image(MyDictionary.class.getResource("divice-logo-58-58.png").toExternalForm()));
+        primaryStage.getIcons().add(new Image(Assets.class.getResource("divice-logo-58-58.png").toExternalForm()));
         primaryStage.setScene(new Scene(createContent()));
         primaryStage.show();
     }
